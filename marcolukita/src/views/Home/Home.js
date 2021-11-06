@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import Input from "../../components/Input/Input";
+import Header from "../../components/Header/Header";
 export default class Home extends React.Component {
   constructor() {
     super();
@@ -12,7 +13,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='text-center text-info'>Sistem Informasi E-biz</h2>
+        <Header />
         <div>
           <Input
             getValues={(name, value) => this.setState({ [name]: value })}
@@ -20,7 +21,6 @@ export default class Home extends React.Component {
           <Card nama={this.state.nama}>
             <p>{this.state.status}</p>
           </Card>
-          {/* <Card nama={this.state.nama}></Card> */}
         </div>
       </div>
     );
