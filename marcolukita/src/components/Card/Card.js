@@ -4,7 +4,7 @@ export default class Card extends Component {
   render() {
     return (
       <div className='card'>
-        <div className='card-header'>My card</div>
+        <div className='card-header'>{this.props.nama}</div>
         <div className='card-body'>{this.props.children}</div>
       </div>
     );

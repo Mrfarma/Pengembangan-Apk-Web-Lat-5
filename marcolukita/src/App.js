@@ -13,7 +13,7 @@ class App extends Component {
   }
   render() {
     const View = () => {
-      if (this.state.view === "home") return <Home name='Eden Hazard' />;
+      if (this.state.view === "home") return <Home />;
       else if (this.state.view === "about") return <About />;
       else if (this.state.view === "help") return <Help />;
     };
