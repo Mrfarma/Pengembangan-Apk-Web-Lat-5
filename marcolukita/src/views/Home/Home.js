@@ -5,19 +5,22 @@ export default class Home extends React.Component {
   constructor() {
     super();
     this.state = {
-      nama: "Marco",
+      nama: "",
       status: "",
     };
   }
-
   render() {
     return (
       <div>
         <h2 className='text-center text-info'>Sistem Informasi E-biz</h2>
         <div>
+          <Input
+            getValues={(name, value) => this.setState({ [name]: value })}
+          />
           <Card nama={this.state.nama}>
-            <Input />
+            <p>{this.state.status}</p>
           </Card>
+          {/* <Card nama={this.state.nama}></Card> */}
         </div>
       </div>
     );
